@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Advisor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-8">AI-Driven Learning Path Advisor</h1>
+
+        <div class="bg-white p-6 rounded shadow-md">
+            <form id="learning-path-form" class="space-y-4">
+                <div>
+                    <label for="topic" class="block text-gray-700">Topic You Want to Learn:</label>
+                    <input type="text" id="topic" class="w-full px-3 py-2 border rounded" required>
+                </div>
+                <div>
+                    <label for="current-knowledge" class="block text-gray-700">Your Current Knowledge (Optional):</label>
+                    <textarea id="current-knowledge" class="w-full px-3 py-2 border rounded"></textarea>
+                </div>
+                <div>
+                    <label for="learning-goals" class="block text-gray-700">Your Learning Goals:</label>
+                    <textarea id="learning-goals" class="w-full px-3 py-2 border rounded" required></textarea>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Generate Learning Path</button>
+                    <button type="button" id="reset-btn" class="bg-gray-500 text-white px-4 py-2 rounded">Reset</button>
+                </div>
+            </form>
+
+            <div id="learning-path-output" class="mt-6 p-4 bg-gray-200 rounded"></div>
+            <div id="loading-spinner" class="hidden justify-center items-center mt-6">
+                <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-500"></div>
+            </div>
+            <button id="learn-more-btn" class="hidden bg-green-500 text-white px-4 py-2 mt-4 rounded">Learn More</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
